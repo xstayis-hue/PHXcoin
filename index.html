@@ -289,8 +289,8 @@ body::after{
       <div class="coin" id="phx-coin" aria-hidden="true"><span>VPHX</span></div>
     </div>
     <div class="hero-title">VibePHXCoin</div>
-    <div class="hero-net">planned for TON · community meme token</div>
-    <div class="badge"><span class="d"></span><span id="status-badge">pre-launch · no utility</span></div>
+    <div class="hero-net">planned for TON · testnet before mainnet</div>
+    <div class="badge"><span class="d"></span><span id="status-badge">not deployed · no utility</span></div>
 
     <div class="ton-row" id="ton-row" role="link" tabindex="0">
       TON · <b id="ton-price">нет данных</b>
@@ -307,12 +307,17 @@ body::after{
 
   <!-- CONTRACT: placeholder until a verified deployment -->
   <div class="panel">
-    <h2>Контракт · не запущен</h2>
-    <div class="meta-row"><span>Планируемая сеть</span><span>TON</span></div>
+    <h2>Параметры · план</h2>
+    <div class="meta-row"><span>Сеть</span><span>TON · сначала testnet</span></div>
     <div class="meta-row"><span>Тикер</span><span>VPHX</span></div>
     <div class="meta-row"><span>Формат</span><span>Jetton</span></div>
-    <div class="meta-row"><span>Адрес</span><span id="contract-view">не развернут</span></div>
-    <button type="button" class="btn-ghost" id="copy-btn" disabled>Скопировать адрес</button>
+    <div class="meta-row"><span>Общий выпуск</span><span>1 000 000 000 VPHX</span></div>
+    <div class="meta-row"><span>Дробность</span><span>9 знаков</span></div>
+    <div class="meta-row"><span>Первоначальный выпуск</span><span>на кошелёк владельца · адрес не указан</span></div>
+    <div class="meta-row"><span>Дополнительный mint</span><span>не планируется</span></div>
+    <div class="meta-row"><span>Администратор</span><span>планируется отозвать после mint</span></div>
+    <div class="meta-row"><span>Контракт</span><span id="contract-view">ещё не развёрнут</span></div>
+    <button type="button" class="btn-ghost" id="copy-btn" disabled>Адрес появится после проверки</button>
   </div>
 
   <!-- Balance stays unavailable until a token and wallet connection exist -->
@@ -327,8 +332,8 @@ body::after{
   <div class="panel">
     <h2>Позиция проекта</h2>
     <div class="project-note">
-      На старте у токена нет функций, прав на доход, долю в компании или гарантированной ликвидности.
-      Не покупай его в расчёте на прибыль. Любые будущие изменения опубликуем отдельно до выпуска.
+      На старте у токена не будет функций, прав на доход, долю в компании или гарантированной ликвидности.
+      Не покупай его в расчёте на прибыль. Параметры выше — план; пока токен не выпущен и контракт не проверен.
     </div>
     <div class="project-note ai-note">
       Приложение и материалы разрабатываются с помощью ИИ; решения о выпуске, параметрах и средствах
@@ -415,7 +420,7 @@ function openLink(url) {
 
 /* term log */
 (function () {
-  var lines = ['VPHX · pre-launch', 'jetton · not deployed', 'no promised utility', 'vault · awaiting setup', 'contract · pending'];
+  var lines = ['VPHX · testnet first', 'jetton · not deployed', 'fixed supply · planned', 'admin revoke · planned', 'no promised utility'];
   var i = 0;
   setInterval(function () {
     document.getElementById('term').textContent = lines[i % lines.length];
